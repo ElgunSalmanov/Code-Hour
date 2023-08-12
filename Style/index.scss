@@ -1,0 +1,393 @@
+@import "./style.scss";
+
+body {
+  background: #fff;
+}
+
+.navbar {
+  display: flex;
+  padding: 30px 70px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+
+  @include mobile {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: none;
+
+    @include tablet {
+      display: block;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 3rem;
+
+    @include tablet {
+      display: none;
+      justify-content: space-between;
+    }
+  }
+}
+
+.today {
+  background-color: #451314;
+
+  .priceBar {
+    background-color: #000;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      display: flex;
+      column-gap: 1rem;
+      color: #fff;
+
+      &-shop {
+        text-decoration: underline;
+        color: #fff;
+
+        &:hover {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .closet {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 10rem;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      row-gap: 1rem;
+    }
+
+    &__poster {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      margin-left: 70px;
+
+      @include tablet {
+        margin-left: 6rem;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      row-gap: 2rem;
+
+      @include tablet {
+        align-items: center;
+      }
+
+      &-text {
+        font-size: 45px;
+        font-weight: normal;
+      }
+
+      &-button {
+        width: 9rem;
+        height: 3rem;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #f1d4d4;
+          box-shadow: 0px 0px 15px 0px #fff;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.collection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 65px 10px;
+  column-gap: 2rem;
+  background-color: #fff;
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    &-text {
+      font-size: 47px;
+      font-weight: normal;
+    }
+
+    &-discover {
+      font-size: 17px;
+    }
+
+    .design {
+      width: 9rem;
+      height: 3rem;
+      cursor: pointer;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #444;
+        box-shadow: 0px 0px 15px 0px #444;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  &__poster {
+    display: flex;
+    column-gap: 1rem;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &-item {
+      width: 300px;
+      height: 550px;
+      object-fit: cover;
+    }
+  }
+}
+
+.life {
+  width: 100%;
+  height: 50vh;
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    margin-top: 17rem;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+  }
+
+  &__backround {
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  background-color: #fff;
+  padding: 75px 0;
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .clothing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__img {
+      width: 600px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .design {
+      width: 9rem;
+      height: 3rem;
+      cursor: pointer;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #444;
+        box-shadow: 0px 0px 15px 0px #444;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .accessories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 600px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .design {
+      width: 9rem;
+      height: 3rem;
+      cursor: pointer;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #444;
+        box-shadow: 0px 0px 15px 0px #444;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.contact {
+  width: 100%;
+  height: 600px;
+  background-image: url(../assets/img/img-m57zVv6WWeTX3eepson.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__text {
+    font-size: 40px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__subscribe {
+    font-size: 65px;
+    font-weight: normal;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__email {
+    width: 30rem;
+    height: 3rem;
+    text-indent: 10px;
+    border: none;
+    outline: none;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: 7rem;
+    height: 3rem;
+    cursor: pointer;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: #444;
+      box-shadow: 0px 0px 15px 0px #444;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.help {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+  background-color: #fff;
+
+  .lhelp {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    .flink {
+      text-decoration: underline;
+    }
+  }
+
+  .need {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__text {
+      font-size: 40px;
+    }
+
+    &__list {
+      display: flex;
+      column-gap: 30px;
+    }
+  }
+}
